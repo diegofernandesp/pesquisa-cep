@@ -13,14 +13,14 @@ object fPrincipal: TfPrincipal
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
-  object BitBtn1: TBitBtn
+  object bPesquisa: TBitBtn
     Left = 95
     Top = 6
     Width = 75
     Height = 25
     Caption = 'Pesquisar'
     TabOrder = 0
-    OnClick = BitBtn1Click
+    OnClick = bPesquisaClick
   end
   object Memo1: TMemo
     Left = 8

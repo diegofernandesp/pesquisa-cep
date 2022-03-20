@@ -9,10 +9,10 @@ uses
 
 type
   TfPrincipal = class(TForm)
-    BitBtn1: TBitBtn;
+    bPesquisa: TBitBtn;
     Memo1: TMemo;
     edCep: TRzMaskEdit;
-    procedure BitBtn1Click(Sender: TObject);
+    procedure bPesquisaClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -26,7 +26,7 @@ implementation
 
 {$R *.dfm}
 
-procedure TfPrincipal.BitBtn1Click(Sender: TObject);
+procedure TfPrincipal.bPesquisaClick(Sender: TObject);
 var
   ViaCep: IPesquisarCep;
 begin

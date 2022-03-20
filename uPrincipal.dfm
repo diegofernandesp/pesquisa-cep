@@ -13,20 +13,13 @@ object fPrincipal: TfPrincipal
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
-  object Edit1: TEdit
-    Left = 8
-    Top = 8
-    Width = 121
-    Height = 21
-    TabOrder = 0
-  end
   object BitBtn1: TBitBtn
-    Left = 135
+    Left = 95
     Top = 6
     Width = 75
     Height = 25
     Caption = 'Pesquisar'
-    TabOrder = 1
+    TabOrder = 0
     OnClick = BitBtn1Click
   end
   object Memo1: TMemo
@@ -40,6 +33,16 @@ object fPrincipal: TfPrincipal
     Font.Name = 'Consolas'
     Font.Style = []
     ParentFont = False
+    TabOrder = 1
+  end
+  object edCep: TRzMaskEdit
+    Left = 8
+    Top = 8
+    Width = 79
+    Height = 21
+    EditMask = '00000-000;0;_'
+    MaxLength = 9
     TabOrder = 2
+    Text = ''
   end
 end

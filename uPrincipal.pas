@@ -5,13 +5,13 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons,
-  PesquisaCep.IPesquisaCep, PesquisaCep.uViaCep;
+  PesquisaCep.IPesquisaCep, PesquisaCep.uViaCep, Vcl.Mask, RzEdit;
 
 type
   TfPrincipal = class(TForm)
-    Edit1: TEdit;
     BitBtn1: TBitBtn;
     Memo1: TMemo;
+    edCep: TRzMaskEdit;
     procedure BitBtn1Click(Sender: TObject);
   private
     { Private declarations }
@@ -32,7 +32,7 @@ var
 begin
   ViaCep := TViaCep.Create;
   Memo1.Lines.Text := ViaCep
-    .PesquisarCep(Edit1.Text)
+    .PesquisarCep(edCep.Text)
     .ToString;
 end;
 

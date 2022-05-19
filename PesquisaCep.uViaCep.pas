@@ -12,11 +12,10 @@ type
     URL_VIACEP = 'https://viacep.com.br/ws/%s/xml/';
   private
     FCep: TCep;
+    FCepStr: String;
     function GetXml: String;
     procedure ProcessarXML(AXml: String);
     function IsCepValido: Boolean;
-  private
-    FCepStr: String;
   public
     function PesquisarCep(AValue: string): TCep;
   end;
